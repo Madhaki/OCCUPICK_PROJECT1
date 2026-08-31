@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OccuPick — Where skills meet opportunity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#home"><span class="brand-mark">O</span> OccuPick</a>
+    <nav>
+      <a href="#home">Home</a><a href="#about">About</a><a href="#how">How it works</a>
+      <a href="#impact">Impact</a>
+    </nav>
+    <button id="themeBtn" class="icon-btn" title="Toggle theme">☾</button>
+    <div class="nav-actions"><button class="btn ghost" onclick="openModal('login')">Log in</button><button class="btn" onclick="openModal('signup')">Get started</button></div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy">
+        <div class="eyebrow">Societal Innovation • Micro-Employment • Verified Matching</div>
+        <h1>Where <span>skills</span> meet opportunity.</h1>
+        <p>A trusted skill-to-task matching platform for micro-employment — physically and digitally.</p>
+        <div class="hero-actions">
+          <button class="btn big" onclick="showToast('Opening opportunities…')">Find work <span>→</span></button>
+          <button class="btn outline big" onclick="openModal('task')">Post a task</button>
+        </div>
+        <div class="trust-row"><span>✓ Skill-based matching</span><span>✓ Flexible micro-tasks</span><span>✓ Secure payments</span></div>
+      </div>
+      <div class="swipe-zone" id="swipeZone">
+        <div class="swipe-hint">← PASS &nbsp;&nbsp; SWIPE &nbsp;&nbsp; LIKE →</div>
+        <div class="match-stack" id="matchStack">
+        <div class="match-card swipe-card card-back"><div class="profile"><div class="avatar">MC</div><div><h3>Marco Cruz</h3><p>Video Editor</p></div><span class="score">91%</span></div><div class="skills"><span>Premiere Pro</span><span>Reels</span></div><div class="task-mini"><div><small>Task</small><strong>Edit a short reel</strong></div><b>₱650</b></div></div>
+        <div class="match-card swipe-card card-back second"><div class="profile"><div class="avatar">AS</div><div><h3>Ana Santos</h3><p>Social Media Designer</p></div><span class="score">94%</span></div><div class="skills"><span>Canva</span><span>Social Media</span></div><div class="task-mini"><div><small>Task</small><strong>Create 5 posts</strong></div><b>₱700</b></div></div>
+        <div class="match-card swipe-card active-card" id="activeCard">
+        <div class="card-top"><span>Today's match</span><span class="live">● LIVE</span></div>
+        <div class="profile">
+          <div class="avatar">JD</div>
+          <div><h3>Jordan Dela Cruz</h3><p>Graphic Designer</p></div>
+          <span class="score">96%</span>
+        </div>
+        <div class="skills"><span>Logo Design</span><span>Branding</span><span>Canva</span></div>
+        <div class="task-mini"><div><small>Task</small><strong>Create a logo</strong></div><b>₱800</b></div>
+        <div class="swipe"><button class="pass-btn" onclick="swipeCard('left')">✕</button><button class="heart" onclick="swipeCard('right')">♥</button></div>
+        <div class="drag-tip">Drag the card or use the buttons</div>
+      </div></div></div>
+    </section>
+
+    <section id="about" class="section soft">
+      <div class="section-heading"><div class="eyebrow">THE PROBLEM</div><h2>Small tasks. Real opportunities.</h2><p>OccuPick bridges people who need flexible help with emerging professionals looking for experience and income.</p></div>
+      <div class="problem-grid">
+        <article><div class="num">01</div><h3>Need part-time income</h3><p>Students and emerging professionals need accessible ways to earn.</p></article>
+        <article><div class="num">02</div><h3>Need experience</h3><p>New workers can struggle to find someone willing to hire them.</p></article>
+        <article><div class="num">03</div><h3>Small business needs</h3><p>Businesses may have dozens of small tasks but cannot hire full-time.</p></article>
+        <article><div class="num">04</div><h3>Competitive market</h3><p>Freelancers can be expensive for small, occasional tasks.</p></article>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="section-heading"><div class="eyebrow">THE EXPERIENCE</div><h2>What if finding work felt like finding the right match?</h2></div>
+      <div class="flow">
+        <div class="flow-item"><span>01</span><h3>Post</h3><p>Define what you need and set your criteria.</p></div>
+        <div class="line"></div>
+        <div class="flow-item"><span>02</span><h3>Discover</h3><p>OccuPick sorts candidates by relevant skills.</p></div>
+        <div class="line"></div>
+        <div class="flow-item"><span>03</span><h3>Swipe & Match</h3><p>Review prospects and choose the best fit.</p></div>
+        <div class="line"></div>
+        <div class="flow-item"><span>04</span><h3>Workroom</h3><p>Connect, discuss, collaborate and complete.</p></div>
+        <div class="line"></div>
+        <div class="flow-item"><span>05</span><h3>Pay</h3><p>Secure payments, stress-free.</p></div>
+      </div>
+    </section>
+
+    <section class="section dark-section">
+      <div class="split">
+        <div><div class="eyebrow">FOR CLIENTS</div><h2>Need a logo? A chart? A quick task done?</h2><p>Set your criteria, review matched prospects, compare candidates and collaborate in one place.</p><button class="btn white" onclick="openModal('task')">Post a task →</button></div>
+        <div class="demo-list">
+          <div class="demo-row"><span>🎨</span><div><b>Logo design</b><small>Digital • Creative</small></div><strong>₱800</strong></div>
+          <div class="demo-row"><span>📊</span><div><b>Organize a chart</b><small>Digital • Data</small></div><strong>₱500</strong></div>
+          <div class="demo-row"><span>📦</span><div><b>Inventory items</b><small>Physical • Business</small></div><strong>₱650</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><div class="eyebrow">FOR WORKERS</div><h2>Choose tasks you want.</h2><p>Show your interest, get matched, enter a workroom, complete the micro-task and get paid.</p></div>
+      <div class="worker-grid">
+        <div class="worker-step"><b>01</b><h3>Create your profile</h3><p>Show your skills and experience.</p></div>
+        <div class="worker-step"><b>02</b><h3>Discover opportunities</h3><p>Find physical or digital work that fits.</p></div>
+        <div class="worker-step"><b>03</b><h3>Connect & discuss</h3><p>Use the workroom to coordinate.</p></div>
+        <div class="worker-step"><b>04</b><h3>Get paid</h3><p>Complete quality work and earn.</p></div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="section-heading"><div class="eyebrow">USE CASES</div><h2>One platform. Different kinds of work.</h2><p>OccuPick differentiates physical and digital work when choosing opportunities.</p></div>
+      <div class="use-grid">
+        <div><span>💻</span><h3>Digital Work</h3><p>Flexible online micro-services and creative tasks.</p></div>
+        <div><span>📍</span><h3>Physical Work</h3><p>Small local tasks that need an on-site worker.</p></div>
+        <div><span>💳</span><h3>Digital Payments</h3><p>A payment step designed around completed work.</p></div>
+        <div><span>🤝</span><h3>Verified Matching</h3><p>Connect based on skills and task requirements.</p></div>
+      </div>
+    </section>
+
+    <section id="impact" class="section impact">
+      <div><div class="eyebrow">ECONOMIC IMPACT</div><h2>Micro-opportunities can create wider opportunity.</h2><p>By connecting businesses with emerging professionals for small, flexible jobs, OccuPick aims to support both MSME growth and economic growth.</p></div>
+      <div class="stats"><div><strong>MSME</strong><span>Growth</span></div><div><strong>+</strong><span>Experience</span></div><div><strong>₱</strong><span>Income opportunities</span></div></div>
+    </section>
+
+    <section class="cta section">
+      <h2>Ready to find your next match?</h2><p>Build your profile, post a task, and turn skills into opportunity.</p>
+      <button class="btn big" onclick="openModal('signup')">Get started →</button>
+    </section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">O</span> OccuPick</div><p>Where skills meet opportunity.</p><span>© 2026 OccuPick</span></footer>
+
+  <div id="modal" class="modal hidden"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
